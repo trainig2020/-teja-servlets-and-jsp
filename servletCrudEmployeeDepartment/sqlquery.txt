@@ -1,0 +1,9 @@
+	Deparment
+
+
+create table department (dept_id int primary key auto_increment,dept_name varchar(20),dept_loc varchar(20));
+
+
+	Employee
+
+create table employee (emp_id int primary key auto_increment,emp_name varchar(20),dob varchar(20),mail_id varchar(20),dept_emp_fk int,mobile_no bigint,salary float,company_name varchar(20),foreign key(dept_emp_fk) references department(dept_id) ON DELETE CASCADE);
